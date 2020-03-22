@@ -28,3 +28,11 @@ filetype plugin on
 set backspace=indent,eol,start
 "ポップアップ画面のカラーを変更
 highlight Pmenu ctermfg=Black ctermbg=Magenta guibg=Magenta
+
+
+"遅延ローディングの設定
+augroup lazy-load
+  autocmd!
+  autocmd FileType go packadd! govim
+  autocmd FileType elm packadd! elm-vim
+augroup END

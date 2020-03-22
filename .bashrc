@@ -131,3 +131,6 @@ eval $(dircolors -b ~/dircolors)
 alias mkcp="source mkcp.sh"
 alias cl="cl.sh"
 alias tgen="source $HOME/sh/tgen/tgen.sh"
+
+#環境変数
+export SESSION_KEY="aaaaa"
