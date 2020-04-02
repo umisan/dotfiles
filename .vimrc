@@ -28,11 +28,30 @@ filetype plugin on
 set backspace=indent,eol,start
 "ポップアップ画面のカラーを変更
 highlight Pmenu ctermfg=Black ctermbg=Magenta guibg=Magenta
+"vi互換を切る
+set nocompatible
+"ファイル書き込み時にバックアップを作らない
+set nobackup
+set nowritebackup
+set noswapfile
 
+"govim用の設定
+function! s:config_govim()
+  set ttymouse=sgr
+  set updatetime=500
+  set balloondelay=250
+  set signcolumn=number
+  set mouse=a
+  if has("patch-8.1.1904")
+    set completeopt+=popup
+    set completepopup=align:menu,border:off,highlight:Pmenu
+  endif
+  packadd! govim
+endfunction
 
 "遅延ローディングの設定
 augroup lazy-load
   autocmd!
-  autocmd FileType go packadd! govim
+  autocmd FileType go call s:config_govim()
   autocmd FileType elm packadd! elm-vim
 augroup END
