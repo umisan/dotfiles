@@ -34,6 +34,8 @@ set nocompatible
 set nobackup
 set nowritebackup
 set noswapfile
+"vim-airline用の設定
+let g:airline#extensions#tabline#enabled=1
 
 "govim用の設定
 function! s:config_govim()
