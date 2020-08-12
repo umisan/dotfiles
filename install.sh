@@ -31,6 +31,9 @@ function check_and_install() {
 
 #install vim plugin
 function install_vim_plugin() {
+  if [ ! -d $DIR ]; then
+    mkdir -p $DIR
+  fi
   #ターゲットディレクトリに移動
   cd $DIR
   #プラグインのインストール

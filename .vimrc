@@ -36,24 +36,8 @@ set nowritebackup
 set noswapfile
 "vim-airline用の設定
 let g:airline#extensions#tabline#enabled=1
-
-"govim用の設定
-function! s:config_govim()
-  set ttymouse=sgr
-  set updatetime=500
-  set balloondelay=250
-  set signcolumn=number
-  set mouse=a
-  if has("patch-8.1.1904")
-    set completeopt+=popup
-    set completepopup=align:menu,border:off,highlight:Pmenu
-  endif
-  packadd! govim
-endfunction
-
-"遅延ローディングの設定
-augroup lazy-load
-  autocmd!
-  autocmd FileType go call s:config_govim()
-  autocmd FileType elm packadd! elm-vim
-augroup END
+"fzf用の設定
+set rtp+=/usr/local/opt/fzf
+"バッファ移動
+nnoremap <silent> <C-j> :bprev<CR>
+nnoremap <silent> <C-k> :bnext<CR>
