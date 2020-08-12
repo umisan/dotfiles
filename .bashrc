@@ -130,7 +130,12 @@ eval $(dircolors -b ~/dircolors)
 #エイリアスの設定
 alias mkcp="source mkcp.sh"
 alias cl="cl.sh"
+alias mdgen="source mdgen.sh"
+alias g="source g.sh"
+alias gd="source gd.sh"
 alias tgen="source $HOME/sh/tgen/tgen.sh"
 
 #環境変数
 export SESSION_KEY="aaaaa"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

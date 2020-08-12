@@ -38,6 +38,17 @@ set noswapfile
 let g:airline#extensions#tabline#enabled=1
 "fzf用の設定
 set rtp+=/usr/local/opt/fzf
+set rtp+=~/.fzf
 "バッファ移動
 nnoremap <silent> <C-j> :bprev<CR>
 nnoremap <silent> <C-k> :bnext<CR>
+"govim用の設定
+set ttymouse=sgr
+set updatetime=500
+set balloondelay=250
+set signcolumn=number
+set mouse=a
+if has("patch-8.1.1904")
+  set completeopt+=popup
+  set completepopup=align:menu,border:off,highlight:Pmenu
+endif
