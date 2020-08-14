@@ -139,3 +139,5 @@ alias tgen="source $HOME/sh/tgen/tgen.sh"
 export SESSION_KEY="aaaaa"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+export TERM=screen-256color
