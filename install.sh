@@ -15,7 +15,7 @@ function copy_bashrc() {
 }
 
 function copy_tmuxconf() {
-  echo "not ready"
+  ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
 }
 
 #ターゲットディレクトリにプラグインがインストールされているかをチェック
@@ -31,6 +31,9 @@ function check_and_install() {
 
 #install vim plugin
 function install_vim_plugin() {
+  if [ ! -d $DIR ]; then
+    mkdir -p $DIR
+  fi
   #ターゲットディレクトリに移動
   mkdir -p $DIR
   cd $DIR
@@ -42,6 +45,7 @@ function install_vim_plugin() {
   check_and_install "tlib_vim" "https://github.com/tomtom/tlib_vim.git"
   check_and_install "vim-airline" "https://github.com/vim-airline/vim-airline.git"
   check_and_install "vim-snippets" "https://github.com/honza/vim-snippets.git"
+  check_and_install "govim" "https://github.com/govim/govim.git"
 }
 
 #引数がない場合は全てコピー
