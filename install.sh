@@ -35,6 +35,7 @@ function install_vim_plugin() {
     mkdir -p $DIR
   fi
   #ターゲットディレクトリに移動
+  mkdir -p $DIR
   cd $DIR
   #プラグインのインストール
   check_and_install "lexima.vim" "https://github.com/cohama/lexima.vim.git"
