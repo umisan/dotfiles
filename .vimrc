@@ -52,3 +52,4 @@ if has("patch-8.1.1904")
   set completeopt+=popup
   set completepopup=align:menu,border:off,highlight:Pmenu
 endif
+set clipboard+=unnamed
