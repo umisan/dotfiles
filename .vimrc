@@ -53,3 +53,4 @@ if has("patch-8.1.1904")
   set completepopup=align:menu,border:off,highlight:Pmenu
 endif
 set clipboard+=unnamed
+set visualbell t_vb=
