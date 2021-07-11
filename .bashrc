@@ -125,7 +125,7 @@ export PATH=$PATH:~/c++/template
 export GOPATH=$HOME/go
 
 #lsのカラー設定を変更
-eval $(dircolors -b ~/dircolors)
+#eval $(dircolors -b ~/dircolors)
 
 #エイリアスの設定
 alias mkcp="source mkcp.sh"
@@ -134,6 +134,13 @@ alias mdgen="source mdgen.sh"
 alias g="source g.sh"
 alias gd="source gd.sh"
 alias tgen="source $HOME/sh/tgen/tgen.sh"
+alias f="find * -type f | fzf"
+alias d="source ~/Documents/sh/daily.sh"
+alias pu="source ~/Documents/sh/push.sh"
+alias co="source ~/Documents/sh/checkout.sh"
+alias cob="git checkout -b"
+alias hi="source ~/Documents/sh/hi.sh"
+alias curb="source ~/Documents/sh/curb.sh"
 
 #環境変数
 export SESSION_KEY="aaaaa"
@@ -141,3 +148,4 @@ export SESSION_KEY="aaaaa"
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 export TERM=screen-256color
+export CLICOLOR=1
