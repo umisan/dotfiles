@@ -45,7 +45,6 @@ function install_vim_plugin() {
   check_and_install "tlib_vim" "https://github.com/tomtom/tlib_vim.git"
   check_and_install "vim-airline" "https://github.com/vim-airline/vim-airline.git"
   check_and_install "vim-snippets" "https://github.com/honza/vim-snippets.git"
-  check_and_install "govim" "https://github.com/govim/govim.git"
   check_and_install "iceberg.vim" "https://github.com/cocopon/iceberg.vim.git"
   check_and_install "coc" "https://github.com/neoclide/coc.nvim.git"
 }
