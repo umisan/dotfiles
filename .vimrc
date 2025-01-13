@@ -20,37 +20,19 @@ syntax on
 set incsearch
 "検索結果をハイライト
 set hlsearch
-"タグファイル
-set tags=./tags;,tags;
-"オムニ補完用
 filetype plugin on
 "backspaceで行頭も削除
 set backspace=indent,eol,start
-"ポップアップ画面のカラーを変更
-highlight Pmenu ctermfg=Black ctermbg=Magenta guibg=Magenta
 "vi互換を切る
 set nocompatible
 "ファイル書き込み時にバックアップを作らない
 set nobackup
 set nowritebackup
 set noswapfile
-"vim-airline用の設定
-let g:airline#extensions#tabline#enabled=1
 "fzf用の設定
 set rtp+=/usr/local/opt/fzf
 set rtp+=~/.fzf
 "バッファ移動
 nnoremap <silent> <C-j> :bprev<CR>
 nnoremap <silent> <C-k> :bnext<CR>
-"govim用の設定
-set ttymouse=sgr
-set updatetime=500
-set balloondelay=250
-set signcolumn=number
-set mouse=a
-if has("patch-8.1.1904")
-  set completeopt+=popup
-  set completepopup=align:menu,border:off,highlight:Pmenu
-endif
 set clipboard+=unnamed
-set visualbell t_vb=
