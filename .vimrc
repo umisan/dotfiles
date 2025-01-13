@@ -12,8 +12,6 @@ set tabstop=2
 set autoindent
 "インデントの自動増減
 set smartindent
-"現在のラインにアンダーラインを引く
-set cursorline
 "シンタックスハイライトをオン
 syntax on
 "インクリメンタルサーチをオン
@@ -29,6 +27,8 @@ set nocompatible
 set nobackup
 set nowritebackup
 set noswapfile
+" vim-airlineの設定
+let g:airline#extensions#tabline#enabled=1
 "fzf用の設定
 set rtp+=/usr/local/opt/fzf
 set rtp+=~/.fzf
