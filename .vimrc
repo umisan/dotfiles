@@ -36,3 +36,10 @@ set rtp+=~/.fzf
 nnoremap <silent> <C-j> :bprev<CR>
 nnoremap <silent> <C-k> :bnext<CR>
 set clipboard+=unnamed
+" vimhelpgeneratorの設定
+let g:vimhelpgenerator_defaultlanguage='en'
+" netrwの設定
+let g:netrw_browse_split = 4
+let g:netrw_winsize = 25
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
