@@ -32,14 +32,23 @@ let g:airline#extensions#tabline#enabled=1
 "fzf用の設定
 set rtp+=/usr/local/opt/fzf
 set rtp+=~/.fzf
+" filetype on
+filetype plugin on
 "バッファ移動
 nnoremap <silent> <C-j> :bprev<CR>
 nnoremap <silent> <C-k> :bnext<CR>
 set clipboard+=unnamed
 " vimhelpgeneratorの設定
 let g:vimhelpgenerator_defaultlanguage='en'
-" netrwの設定
-let g:netrw_browse_split = 4
-let g:netrw_winsize = 25
-let g:netrw_banner = 0
-let g:netrw_liststyle = 3
+" vim-lspの設定
+let g:lsp_diagnostics_virtual_text_enabled = 0
+let g:lsp_diagnostics_echo_cursor = 1
+let g:lsp_document_code_action_signs_enabled = 0
+let g:lsp_diagnostics_highlights_insert_mode_enabled = 0
+let g:lsp_diagnostics_echo_delay = 50
+let g:lsp_diagnostics_highlights_delay = 50
+let g:lsp_diagnostics_signs_delay = 50
+set omnifunc=lsp#complete
+" copilot.vimの設定
+"let g:copilot_enabled = v:false
+imap <C-\> <Plug>(copilot-suggest)
